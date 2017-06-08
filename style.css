@@ -1,0 +1,15 @@
+form {
+    display: inline-block;
+    float: left;
+}
+
+#list {
+    padding-left: 10px;
+    display: inline-block;
+    float: left;
+}
+
+#changeYear {
+    float: none;
+    display: inline-block;
+}
