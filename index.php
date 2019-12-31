@@ -35,7 +35,12 @@ if ( isset($_POST['edit']) ) { // if edit book
     if ($data['read']/$data['total'] === 1) {
         $book->finish = 1;
         $date = getdate();
-        $var = $date['year'] . '-' . $date['mon'] . '-' . $date['mday'] . '<br />';
+        if ( strlen( strval( $date['mday'] )) == 1 )
+            $day = '0' . $date['mday'];
+        else
+            $day = $date['mday'];
+        //echo $day;
+        $var = $date['year'] . '-' . $date['mon'] . '-' . $day;
         $book->date = $var;
     }
     R::store( $book );

@@ -46,7 +46,7 @@ function getRemainPages($year) {
 
 function getRemainDays() {
     $date = getdate();
-    return 366-$date['yday']; // количество дней до конца года
+    return 365-$date['yday']; // количество дней до конца года
 }
 
 function getAveragePages($remainPages, $remainDays) {
